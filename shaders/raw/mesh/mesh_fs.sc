@@ -32,7 +32,7 @@ vec4 lit(float _ndotl, float _rdotv, float _m)
 
 void main()
 {
-	vec3 lightDir = vec3(0.0, 0.0, -1.0);
+	vec3 lightDir = normalize(vec3(1.0, -1.0, 1.0));
 	vec3 normal = normalize(v_normal);
 	vec3 view = normalize(v_view);
 	vec2 bln = blinn(lightDir, normal, view);
